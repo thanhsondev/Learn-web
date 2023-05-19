@@ -1,0 +1,435 @@
+<!--html:5-->
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Learning space | Kiet</title>
+  <script type="text/javascript">
+    function kienThucArray() {
+      var arr1 = ["One", "Two", "Three", "Four", "Four", "Five"];
+      var arr2 = ["Six", "Six", "Seven", "Eight", "Nine", "Ten"];
+      var back = "Back to home page";
+      var result = new Array();
+      result = arr1.concat(arr2);
+      document.writeln("<b>Array 1</b>: " + arr1 + "<br>");
+      document.writeln("<b>Array 2</b>: " + arr2 + "<br>");
+      document.writeln("<b>Array</b>: " + result + "<br>");
+      document.writeln("<hr/>");
+      document.writeln("<b>Array length</b>: " + result.length + "<br>");
+      document.writeln("<b>Index of six</b>: " + result.indexOf("Six") + "<br>");
+      document.writeln("<b>Last index of four</b>: " + result.lastIndexOf("Four") + "<br>");
+      document.writeln("<b>Join array</b>: " + result.join(" - ") + "<br>");
+
+      //Pop array: lấy phần tử cuối cùng của mảng sau đó xóa phần tử đó ra khỏi mảng
+      var arrPop = result.pop();
+      document.writeln("<b>Pop array</b>: " + arrPop + "<br>");
+      document.writeln("<b>Array</b>: " + result + "<br>");
+      document.writeln("<hr/>");
+
+      //Shift array: lấy phần tử đầu tiên của mảng sau đó xóa phần tử đó ra khỏi mảng
+      var arrShift = result.shift();
+      document.writeln("<b>Shift array</b>: " + arrShift + "<br>");
+      document.writeln("<b>Array</b>: " + result + "<br>");
+      document.writeln("<hr/>");
+
+      //Push array: thêm phần tử vào cuối mảng sau đó trả về độ dài của mảng mới
+      var arrPush = result.push("Eleven");
+      document.writeln("<b>Push array</b>: " + arrPush + "<br>");
+      document.writeln("<b>Array</b>: " + result + "<br>");
+      document.writeln("<hr/>");
+
+      //Unshift array: thêm phần tử vào đầu mảng sau đó trả về độ dài của mảng mới
+      var arrUnshift = result.unshift("Zero");
+      document.writeln("<b>Unshift array</b>: " + arrUnshift + "<br>");
+      document.writeln("<b>Array</b>: " + result + "<br>");
+      document.writeln("<hr/>");
+
+      //Slice
+      var arrSlice = ["HTML", "CSS", "JavaScript", "PHP"];
+      //////////////    0       1         2          3
+      //////////////   -4      -3        -2         -1
+      document.writeln("<b>Array</b>: " + arrSlice + "<br>");
+      document.writeln("<b>Slice array from 0</b>: " + arrSlice.slice(0) + "<br>"); //Result: HTML,CSS,JavaScript,PHP
+      document.writeln("<b>Slice array from 1 to 3</b>: " + arrSlice.slice(1, 3) + "<br>"); //Result: CSS,JavaScript
+      document.writeln("<b>Slice array from -2</b>: " + arrSlice.slice(-2) + "<br>"); //Result: JavaScript,PHP
+      document.writeln("<b>Slice array from -3 to -1</b>: " + arrSlice.slice(-3, -1) + "<br>"); //Result: CSS,JavaScript
+      document.writeln("<hr/>");
+      document.writeln("<b>Sort the array by A-Z</b>: " + arrSlice.sort() + "<br>"); //Result: CSS,HTML,JavaScript,PHP
+      document.writeln("<hr/>");
+
+      document.writeln("<a href='learning.html'>" + back.fontcolor("red").bold() + "</a>");
+      return "Array";
+    }
+
+    function kienThucString() {
+      var str = new String("JavaScript is very very very easy");
+      var back = "Back to home page";
+      document.writeln("<b>String</b>: " + str + "<br>");
+      document.writeln("<hr/>");
+
+      // Search: tìm kiếm và trả về vị trí xuất hiện đầu tiên của một giá trị nào đó được tìm kiếm trong chuỗi
+      document.writeln("<b>Search</b>: " + str.search("very") + "<br>");
+      document.writeln("<hr/>");
+
+      // Match: tìm kiếm và trả về giá trị được tìm kiếm trong chuỗi nếu giá trị đó tồn tại trong chuỗi
+      document.writeln("<b>Match</b>: " + str.match("easy") + "<br>");
+      // Ngoài ra, match tìm kiếm và trả về giá trị null nếu giá trị không tồn tại trong chuỗi 
+      document.writeln("<b>Match</b>: " + str.match("ez") + "<br>");
+      document.writeln("<hr/>");
+
+      // Replace: tìm kiếm và thay thế giá trị được tìm kiếm trong chuỗi bằng giá trị mới khác
+      document.writeln("<b>Replace</b>: " + str.replace("easy", "hard") + "<br>");
+      document.writeln("<hr/>");
+
+      // Slice(start, end): Trích xuất chuỗi từ vị trí s đến vị trí e (Không lấy giá trị e)
+      //Lấy toàn bộ chuỗi: slice(0)
+      document.writeln("<b>Slice</b>: " + str.slice(0) + "<br>");
+      //Lấy chuỗi từ vị trí 0 đến vị trí 10: slice(0, 10)
+      document.writeln("<b>Slice</b>: " + str.slice(0, 10) + "<br>");
+      //Lấy chuỗi từ vị trí cuối cùng trong chuỗi: slice(-1)
+      document.writeln("<b>Slice</b>: " + str.slice(-1) + "<br>");
+      document.writeln("<hr/>");
+
+      // Substring(start, end): Trích xuất chuỗi từ vị trí s đến vị trí e (Không lấy giá trị e)
+      //Lấy toàn bộ chuỗi: substring(0)
+      document.writeln("<b>Substring</b>: " + str.substring(0) + "<br>");
+      //Lấy chuỗi từ vị trí 0 đến vị trí 10: substring(0, 10)
+      document.writeln("<b>Substring</b>: " + str.substring(0, 10) + "<br>");
+      //Sự khác nhau của substring và slice là: substring(-1) không thể nhận giá trị âm
+      document.writeln("<b>Substring</b>: " + str.substring(-1) + "<br>");
+      document.writeln("<hr/>");
+
+      // Substr(start, length): Trích xuất chuỗi từ vị trí s đến vị trí s+1 (Không lấy giá trị s+1)
+      //Không truyền length
+      document.writeln("<b>Substr</b>: " + str.substr(0) + "<br>");
+      //Truyền length >0
+      document.writeln("<b>Substr</b>: " + str.substr(0, 8) + "<br>");
+      //Truyền length <0
+      document.writeln("<b>Substr</b>: " + str.substr(-5, 3) + "<br>");
+
+      // Split: Tách chuỗi thành mảng
+      document.writeln("<b>Split</b>: " + str.split(" ") + "<br>");
+      // Ngoài ra, split còn có thể tách chuỗi thành mảng theo kí tự
+      document.writeln("<b>Split</b>: " + str.split("JavaScript") + "<br>");
+      // Ngoài ra, split còn có thể tách chuỗi thành mảng và lấy x giá trị cần tìm
+      document.writeln("<b>Split</b>: " + str.split(" ", 4) + "<br>");
+      document.writeln("<hr/>");
+
+      // ToUpperCase: Chuyển chuỗi thành chữ hoa
+      document.writeln("<b>ToUpperCase</b>: " + str.toUpperCase() + "<br>");
+      document.writeln("<hr/>");
+
+      // ToLowerCase: Chuyển chuỗi thành chữ thường
+      document.writeln("<b>ToLowerCase</b>: " + str.toLowerCase() + "<br>");
+      document.writeln("<hr/>");
+
+      document.writeln("<a href='learning.html'>" + back.fontcolor("red").bold() + "</a>");
+      return "String";
+    }
+
+    function kienThucGlobal() {
+      var strOg = "JavaScript !@#$%^&*()_+|";
+      var strURI = "https://eyehunt.com/%dlink.do%?%userName=peter@nable.com%&%password=123#";
+      var back = "Back to home page";
+
+      document.writeln("<b>String OG</b>: " + strOg + "<br>");
+      document.writeln("<b>String URI</b>: " + strURI + "<br>")
+      document.writeln("<hr/>");
+
+      //Escape: mã hóa chuỗi 
+      document.writeln("<b>Escape</b>: " + escape(strOg) + "<br>");
+      //Unescape: giải mã chuỗi
+      document.writeln("<b>Unescape</b>: " + unescape(escape(strOg)) + "<br>");
+
+      //EncodeURI: mã hóa chuỗi URI
+      document.writeln("<b>EncodeURI</b>: " + encodeURI(strURI) + "<br>");
+      //DecodeURI: giải mã chuỗi URI
+      document.writeln("<b>DecodeURI</b>: " + decodeURI(encodeURI(strURI)) + "<br>");
+      //EncodeURIComponent: mã hóa chuỗi URI Component (Mã hóa hơn Encode URI)
+      document.writeln("<b>EncodeURIComponent</b>: " + encodeURIComponent(strURI) + "<br>");
+      //DecodeURIComponent: giải mã chuỗi URI Component (Giải mã hơn Decode URI)
+      document.writeln("<b>DecodeURIComponent</b>: " + decodeURIComponent(encodeURIComponent(strURI)) + "<br>");
+
+      //isFinite: kiểm tra xem giá trị có phải là số không, trả về tham số true hoặc false
+      document.writeln("<b>isFinite</b>: " + isFinite(123) + "<br>");
+      document.writeln("<b>isFinite</b>: " + isFinite("ahihi") + "<br>");
+      //isNaN: (Ngược lại với isFinite) kiểm tra xem những giá trị không phải là số, trả về tham số true hoặc false
+      document.writeln("<b>isNaN</b>: " + isNaN(123) + "<br>");
+      document.writeln("<b>isNaN</b>: " + isNaN("ahihi") + "<br>");
+      document.writeln("<hr/>");
+
+      document.writeln("<a href='learning.html'>" + back.fontcolor("red").bold() + "</a>");
+      return "String";
+    }
+
+    function kienThucOOP() {
+      //Tạo đối tượng
+      this.oop = function () {
+        //Khai báo thuộc tính
+        this.name = "JavaScript";
+        this.version = 1.0;
+        this.describe = "JavaScript is a programming language";
+
+        //Khai báo phương thức
+        /*Public*/this.getName = getName;
+        /*Public*/this.getVersion = getVersion;
+        /*Public*/this.getDescribe = getDescribe;
+        /*Private*/var priv = "Private";
+
+        //Xây dựng phương thức
+        function getName() {
+          return this.name;
+        }
+        function getVersion() {
+          return this.version;
+        }
+        function getDescribe() {
+          return this.describe;
+        }
+        function getPriv() {
+          return priv;
+        }
+      }
+      //Hiển thị đối tượng
+      var obj = new oop();
+      /*Public*/document.writeln("<b>Method - Name</b>: " + obj.getName() + "<br>");
+      /*Public*/document.writeln("<b>Method - Version</b>: " + obj.getVersion() + "<br>");
+      /*Public*/document.writeln("<b>Method - Describe</b>: " + obj.getDescribe() + "<br>");
+      /*Private*/ /*Access through property*/ document.writeln("<b>Property - Private</b>: " + obj.priv + "<br>");
+      /*Private*/ /*Access through method*/ document.writeln("<b>Method - Private</b>: " + obj.getPriv() + "<br>");
+    }
+
+    function HTMLWrapper() {
+      var str = new String("JavaScript");
+      var back = "Back to home page";
+      document.writeln("<b>String</b>: " + str + "<br>");
+      document.writeln("<hr/>");
+
+      //Anchor: tạo ra thẻ a của tài liêu HTML nhưng k có thuộc tính href
+      document.writeln("<b>Anchor</b>: " + str.anchor("anchor") + "<br>");
+      document.writeln("<hr/>");
+
+      //Link: tạo ra thẻ a của tài liêu HTML có thuộc tính href
+      document.writeln("<b>Link</b>: " + str.link("https://www.facebook.com/the.kietuanguyen/") + "<br>");
+      document.writeln("<hr/>");
+
+      document.writeln("<b>Font and Size</b>: " + "<br>");
+      //Big: hiển thị chuỗi với kích thước lớn hơn bình thường
+      document.writeln("<b>Big</b>: " + str.big() + "<br>");
+      //Small: hiển thị chuỗi với kích thước nhỏ hơn bình thường
+      document.writeln("<b>Small</b>: " + str.small() + "<br>");
+      //Bold: hiển thị chuỗi với độ đậm hơn bình thường
+      document.writeln("<b>Bold</b>: " + str.bold() + "<br>");
+      //Italics: hiển thị chuỗi với độ nghiêng hơn bình thường
+      document.writeln("<b>Italics</b>: " + str.italics() + "<br>");
+      //Fontcolor: hiển thị chuỗi với màu sắc quy định (giá trị truyền vào là mã màu)
+      document.writeln("<b>Fontcolor</b>: " + str.fontcolor("red") + "<br>");
+      //Fontsize: hiển thị chuỗi với kích thước quy định (Giá trị truyền vào từ 1 đến 7)
+      document.writeln("<b>Fontsize</b>: " + str.fontsize(7) + "<br>");
+      document.writeln("<hr/>");
+
+      document.writeln("<b>Filter</b>: " + "<br>");
+      //Blink: hiển thị chuỗi với hiệu ứng nhấp nháy
+      document.writeln("<b>Blink</b>: " + str.blink() + "<br>");
+      //Strike: hiển thị chuỗi với hiệu ứng gạch ngang
+      document.writeln("<b>Strike</b>: " + str.strike() + "<br>");
+      //Sub: hiển thị văn bản nằm ở vị trí dưới cùng của dòng
+      document.writeln("<b>Sub</b>: " + str + str.sub() + "<br>");
+      //Sup: hiển thị văn bản nằm ở vị trí trên cùng của dòng
+      document.writeln("<b>Sup</b>: " + str + str.sup() + "<br>");
+      //Fixed: hiển thị văn bản với font chữ cố định (font-family: monospace)
+      document.writeln("<b>Fixed</b>: " + str.fixed() + "<br>");
+      document.writeln("<hr/>");
+      document.writeln("<a href='learning.html'>" + back.fontcolor("red").bold() + "</a>");
+
+      return "HTML Wrapper";
+    }
+
+    function trim(str) {
+      str = str.replace(/^\s+/igm, "");
+      str = str.replace(/\s+$/igm, "");
+      str = str.replace(/\s+/igm, " ");
+      return str;
+    }
+    function splitName() {
+      var name = document.getElementById("full-name").value;
+      name = trim(name);
+      var firstSpace = name.indexOf(" ");
+      var lastSpace = name.lastIndexOf(" ");
+
+      if (firstSpace > 0 && lastSpace > 0) {
+        result = "Last name: " + name.slice(0, firstSpace) + "<br />";
+        result += "Middle name: " + name.slice(firstSpace, lastSpace) + "<br />";
+        result += "First name: " + name.slice(lastSpace) + "<br />";
+      }
+      else {
+        result = "Error! Please enter your full name.";
+      }
+
+      document.getElementById("result").innerHTML = result;
+      return result;
+    }
+
+    function randomImages() {
+      var imgList = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg", "img/img5.jpg", "img/img6.jpg", "img/img7.jpg", "img/img8.jpg"];
+      var index = Math.floor(Math.random() * imgList.length);
+      var result = '<img src="' + imgList[index] + '" alt="Random Image" />';
+      document.getElementById("images").innerHTML = result;
+    }
+
+    function box() {
+      //Tạo đối tượng
+      this.myBox = function () {
+        //Khai báo thuộc tính
+        this.text = "";
+        this.attr = "";
+
+        //Khai báo phương thức
+        /*Public*/this.createBox = createBox;
+        /*Private*/var createStyle = createStyle;
+
+        //Xây dựng phương thức
+        function createBox(attr, text) {
+          var result;
+          var style = createStyle(attr);
+
+          result = "<div style='" + style + "'>" + text + "</div>";
+          return result;
+        }
+        function createStyle(attr) {
+          var style = "text-align: center; margin-top: 10px;";
+          style += " width: " + attr[0] + "px; ";
+          style += " height: " + attr[1] + "px; ";
+          style += " background-color: " + attr[2] + "; ";
+          style += " color: " + attr[3] + "; ";
+          style += " line-height: " + attr[1] + "px; ";
+          return style;
+        }
+      }
+      //Display
+      var box = new myBox();
+      document.write(box.createBox([200, 100, "red", "white"], "Box 1"));
+    }
+  </script>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      width: 400px;
+      height: 250px;
+      text-align: center;
+      margin: 20px auto;
+      border: 2px solid #000;
+      padding: 10px;
+    }
+
+    .box {
+      width: 400px;
+      height: 335px;
+      text-align: center;
+      margin: 20px auto;
+      border: 2px solid #000;
+      padding: 10px;
+    }
+
+    .box input[type=button] {
+      margin: 10px 0px;
+      padding: 2px 5px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      background-color: #ccc;
+      cursor: pointer;
+    }
+
+    .box input[type=text] {
+      padding: 2px 12px;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+
+    .box img {
+      border: 1px solid #000;
+      width: 388px;
+      height: 233px;
+      margin-top: 16px;
+    }
+
+    .content #knowledge input[type=button] {
+      width: 200px;
+      height: 30px;
+      margin: 10px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      background-color: #ccc;
+      cursor: pointer;
+    }
+
+    .content #result {
+      text-align: justify;
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 10px 74px;
+    }
+
+    .content #practice input[type=button] {
+      margin: 10px 0px;
+      padding: 2px 5px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      background-color: #ccc;
+      cursor: pointer;
+    }
+
+    .content #practice input[type=text] {
+      padding: 2px 12px;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>
+      Kiến thức
+    </h1>
+    <div id="knowledge">
+      <input type="button" value="Kiến thức về Array" onclick="kienThucArray();">
+      <br />
+      <input type="button" value="Kiến thức về String" onclick="kienThucString();">
+      <br />
+      <input type="button" value="Kiến thức về JS Global" onclick="kienThucGlobal();">
+      <br />
+      <input type="button" value="Kiến thức về HTML Wrapper" onclick="HTMLWrapper();">
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>
+      Thực hành
+    </h1>
+    <div id="practice">
+      <input type="text" name="full-name" id="full-name">
+      <input type="button" value="Split" onclick="splitName();">
+      <input type="button" value="Clear" onclick="document.getElementById('full-name').value = '';">
+      <div id="result">
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <h1>
+      Thực hành
+    </h1>
+    <input type="button" value="Your hereafter" onclick="randomImages();">
+    <div id="images">
+      <img src="https://giatricuocsong.org/wp-content/uploads/2019/09/gia-tri-cua-moi-con-nguoi-1.jpg">
+    </div>
+  </div>
+</body>
+
+</html>

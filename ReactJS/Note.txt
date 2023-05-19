@@ -1,0 +1,5 @@
+Create a ReactJS project called KRefurbish by using:
+  npx create-react-app KRefurbish
+
+Run the project by using:
+  npm start

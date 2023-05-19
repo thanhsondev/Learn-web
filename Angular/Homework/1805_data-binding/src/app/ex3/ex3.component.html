@@ -1,0 +1,10 @@
+<div>
+  <h1>{{ section }}:
+    Use a ternary operator to output content dynamically
+  </h1>
+  <h2>Welcome, {{ isLoggedIn ? 'Kiet' : 'Guest' }}!</h2>
+  <p>{{ isLoggedIn ? 'You are logged in.' : 'Please log in to continue.' }}</p>
+  <div>
+    <button (click)="onLogin()">{{ isLoggedIn ? 'Logged in' : 'Log in' }}</button>
+  </div>
+</div>

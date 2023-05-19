@@ -1,0 +1,4 @@
+#Khi push lên sẽ không push các file trong thư mục node_modules
+node_modules
+#Nếu clone về sẽ phải chạy lệnh dưới để cài đặt các package cần thiết
+# npm install

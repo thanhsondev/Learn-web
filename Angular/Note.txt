@@ -1,0 +1,12 @@
+Create new Angular App (1605-homework): 
+  ng new 1605-homework --no-strict  
+
+Run an Angular App: 
+  ng serve
+  [hoac]
+  npm start
+
+Create component (component1):
+  ng generate component component1
+  [hoac]
+  ng g c component1

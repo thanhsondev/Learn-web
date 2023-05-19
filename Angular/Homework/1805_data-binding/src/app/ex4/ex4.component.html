@@ -1,0 +1,17 @@
+<div>
+  <h1>{{ section }}:
+    Use property binding to disable an input element
+  </h1>
+  <div>
+    <label for="username">
+      Username:
+      <input type="text" id="username" [(ngModel)]="username" />
+    </label>
+    <br />
+    <label for="pwd">
+      Password:
+      <input type="password" name="pwd" id="pwd" [(ngModel)]="pwd" />
+    </label>
+  </div>
+  <button (click)="onLogin()" [disabled]="!username || !pwd">Login</button>
+</div>
